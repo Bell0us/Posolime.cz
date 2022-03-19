@@ -33,6 +33,9 @@ a {
     .Container {
       padding: 0 1.25rem; } }
 
+.u-m-20 {
+  margin: 0 1.25rem; }
+
 .button {
   display: flex;
   flex-flow: row nowrap;
@@ -107,7 +110,8 @@ button {
 
 .Title-line {
   background-color: #6ec8fa;
-  height: 0.125rem;
+  height: 0.1875rem;
+  border-radius: 100vw;
   flex: 1; }
 
 .Title-text {
@@ -217,7 +221,7 @@ button {
   margin-top: 1.25rem; }
 
 .About {
-  margin-top: 3.75rem;
+  margin-top: 5rem;
   padding: 0px 1.25rem; }
   .About-content {
     display: flex;
@@ -247,3 +251,6 @@ button {
     @media (max-width: 800px) {
       .About-content .button {
         margin: 1rem auto 0; } }
+
+.Catalog {
+  margin-top: 5rem; }

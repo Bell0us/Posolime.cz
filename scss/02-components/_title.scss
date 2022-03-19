@@ -6,7 +6,8 @@
 	}
 	&-line {
 		background-color: $colorMain;
-		height: rem(2px);
+		height: rem(3px);
+		border-radius: 100vw;
 		flex: 1;
 	}
 	&-text {
