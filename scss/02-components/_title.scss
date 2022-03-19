@@ -1,0 +1,18 @@
+.Title {
+	&-container {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+	}
+	&-line {
+		background-color: $colorMain;
+		height: rem(2px);
+		flex: 1;
+	}
+	&-text {
+		color: $colorMain;
+		font-size: rem(32px);
+		font-weight: $fontBold;
+		margin: 0 rem(16px);
+	}
+}

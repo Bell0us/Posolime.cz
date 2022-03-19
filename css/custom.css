@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+html * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif; }
+
+body {
+  background-color: #f4f4f4; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.Main {
+  margin: 5.1875rem 0;
+  background-color: #fff;
+  padding-bottom: 1.875rem; }
+  @media (max-width: 800px) {
+    .Main {
+      margin-top: 5.75rem; } }
+
+.Container {
+  position: relative;
+  width: 100%;
+  max-width: 72.25rem;
+  padding: 0 1rem;
+  margin: 0 auto; }
+  @media (max-width: 576px) {
+    .Container {
+      padding: 0 1.25rem; } }
+
+.button {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: min-content;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem; }
+  .button img {
+    height: 16px;
+    width: auto;
+    transition: transform 200ms ease-in-out; }
+  .button p {
+    white-space: nowrap;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500; }
+  .button-primary {
+    background-color: #6ec8fa; }
+  .button-secondary {
+    background-color: #58e8b7; }
+  .button:hover img, .button:focus img {
+    transform: translateX(6px); }
+
+/* Nav button */
+button {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  z-index: 10; }
+  @media (max-width: 800px) {
+    button {
+      display: unset; } }
+  button span {
+    position: absolute;
+    left: 50%;
+    width: 26px;
+    height: 2px;
+    background-color: #fff; }
+    button span:nth-child(1) {
+      top: 0;
+      transform: translateX(-50%) translateY(0);
+      transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s, transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87); }
+    button span:nth-child(2) {
+      top: 8px;
+      opacity: 1;
+      transform: translateX(-50%); }
+    button span:last-child {
+      top: 16px;
+      transform: translateX(-50%) translateY(0);
+      transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s, transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87); }
+  button.open span:nth-child(1) {
+    top: 50%;
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+    transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s; }
+  button.open span:nth-child(2) {
+    opacity: 0; }
+  button.open span:last-child {
+    top: 50%;
+    transform: translateX(-50%) translateY(0) rotate(-45deg);
+    transition: bottom 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s; }
+
+.Title-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.Title-line {
+  background-color: #6ec8fa;
+  height: 0.125rem;
+  flex: 1; }
+
+.Title-text {
+  color: #6ec8fa;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 1rem; }
+
+.MenuOverlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 72px;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: all 200ms ease-in-out; }
+  .MenuOverlay-bg {
+    max-width: 400px;
+    height: 100%;
+    background-color: #6ec8fa;
+    margin-left: auto;
+    transform: translateX(100%);
+    transition: all 200ms ease-in-out; }
+  .MenuOverlay-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    padding-top: 2.5rem; }
+    .MenuOverlay-nav--item {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #fff;
+      padding: 16px 0;
+      display: inline-block;
+      transition: background-color 200ms ease-in-out; }
+      .MenuOverlay-nav--item:hover, .MenuOverlay-nav--item:focus {
+        text-decoration: underline; }
+  .MenuOverlay.open {
+    background-color: rgba(0, 0, 0, 0.65);
+    pointer-events: all; }
+    .MenuOverlay.open .MenuOverlay-bg {
+      transform: translateX(0); }
+
+.Header {
+  background-color: #6ec8fa;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 3; }
+  .Header-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 800px) {
+      .Header-content {
+        padding-top: 1rem;
+        padding-bottom: 1rem; } }
+    .Header-content img {
+      height: 2.5rem;
+      width: auto; }
+  .Header-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-self: stretch; }
+    @media (max-width: 800px) {
+      .Header-nav {
+        display: none; } }
+    .Header-nav--item {
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: #fff;
+      padding: 18px 30px;
+      display: inline-block;
+      transition: background-color 200ms ease-in-out; }
+      .Header-nav--item.is-active {
+        background-color: #64b8e7; }
+      .Header-nav--item:hover, .Header-nav--item:focus {
+        background-color: #64b8e7; }
+
+.Home-content {
+  background-color: #6ec8fa;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem 1.25rem; }
+  .Home-content--text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px; }
+    .Home-content--text p {
+      color: #fff;
+      font-size: 1.125rem;
+      text-align: center;
+      font-weight: 500; }
+
+.Home-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem; }
+
+.About {
+  margin-top: 3.75rem;
+  padding: 0px 1.25rem; }
+  .About-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-top: 2.5rem; }
+    .About-content--image {
+      width: 45%;
+      height: auto;
+      object-fit: cover; }
+      @media (max-width: 800px) {
+        .About-content--image {
+          display: none; } }
+    .About-content--right {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      gap: 1.25rem; }
+    .About-content--text {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1.25rem; }
+      .About-content--text p {
+        font-size: 0.875rem;
+        line-height: 1.5; }
+    @media (max-width: 800px) {
+      .About-content .button {
+        margin: 1rem auto 0; } }
