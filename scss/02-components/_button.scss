@@ -6,7 +6,7 @@
 	gap: rem(16px);
 	padding: rem(12px) rem(20px);
 	img {
-		height: 16px;
+		height: rem(16px);
 		width: auto;
 		transition: transform 200ms ease-in-out;
 	}
@@ -14,7 +14,7 @@
 		white-space: nowrap;
 		color: $colorWhite;
 		font-size: rem(16px);
-		font-weight: $fontSemibold;
+		font-weight: $fontBold;
 	}
 	&-primary {
 		background-color: $colorMain;
@@ -22,7 +22,15 @@
 	&-secondary {
 		background-color: $colorSecondary;
 	}
+	&-outline {
+		border: 2px solid $colorWhite;
+		transition: background-color 200ms ease-in-out;
 
+		&:hover,
+		&:focus {
+			background-color: $colorSecondary;
+		}
+	}
 	&:hover,
 	&:focus {
 		img {

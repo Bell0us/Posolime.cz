@@ -1,3 +1,40 @@
 .Catalog {
 	margin-top: rem(80px);
+
+	&-content {
+		background-color: $colorMain;
+		padding: rem(40px) rem(20px);
+		margin-top: rem(40px);
+
+		.button {
+			margin: rem(40px) auto 0;
+		}
+	}
+	&-cardsContainer {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(rem(300px), 1fr));
+		gap: rem(20px);
+	}
+	&-card {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: rem(20px);
+		background-color: $colorWhite;
+
+		&--image {
+			width: 100%;
+			max-height: rem(250px);
+			object-fit: cover;
+		}
+		&--textContainer {
+			padding: 0 rem(20px) rem(30px);
+
+			h2 {
+				color: $colorMain;
+				font-weight: $fontSemibold;
+				font-size: rem(26px);
+				margin-bottom: rem(16px);
+			}
+		}
+	}
 }

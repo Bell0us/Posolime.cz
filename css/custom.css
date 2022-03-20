@@ -7,7 +7,8 @@ html * {
 
 body {
   background-color: #f4f4f4;
-  color: #292929; }
+  color: #292929;
+  overflow-x: hidden; }
 
 ul {
   list-style: none; }
@@ -37,6 +38,11 @@ a {
 .u-m-20 {
   margin: 0 1.25rem; }
 
+.u-sm-text {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5; }
+
 .button {
   display: flex;
   flex-flow: row nowrap;
@@ -45,18 +51,23 @@ a {
   gap: 1rem;
   padding: 0.75rem 1.25rem; }
   .button img {
-    height: 16px;
+    height: 1rem;
     width: auto;
     transition: transform 200ms ease-in-out; }
   .button p {
     white-space: nowrap;
     color: #fff;
     font-size: 1rem;
-    font-weight: 500; }
+    font-weight: 600; }
   .button-primary {
     background-color: #6ec8fa; }
   .button-secondary {
     background-color: #58e8b7; }
+  .button-outline {
+    border: 2px solid #fff;
+    transition: background-color 200ms ease-in-out; }
+    .button-outline:hover, .button-outline:focus {
+      background-color: #58e8b7; }
   .button:hover img, .button:focus img {
     transform: translateX(6px); }
 
@@ -146,7 +157,7 @@ button {
       font-size: 1.25rem;
       font-weight: 400;
       color: #fff;
-      padding: 16px 0;
+      padding: 1rem 0;
       display: inline-block;
       transition: background-color 200ms ease-in-out; }
       .MenuOverlay-nav--item:hover, .MenuOverlay-nav--item:focus {
@@ -163,7 +174,8 @@ button {
   left: 0;
   top: 0;
   right: 0;
-  z-index: 3; }
+  z-index: 3;
+  box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.25); }
   .Header-content {
     display: flex;
     flex-flow: row nowrap;
@@ -187,7 +199,7 @@ button {
       font-size: 1.125rem;
       font-weight: 400;
       color: #fff;
-      padding: 18px 30px;
+      padding: 1.125rem 1.875rem;
       display: inline-block;
       transition: background-color 200ms ease-in-out; }
       .Header-nav--item.is-active {
@@ -246,12 +258,114 @@ button {
       display: flex;
       flex-flow: column nowrap;
       gap: 1.25rem; }
-      .About-content--text p {
-        font-size: 0.875rem;
-        line-height: 1.5; }
     @media (max-width: 800px) {
       .About-content .button {
         margin: 1rem auto 0; } }
 
 .Catalog {
   margin-top: 5rem; }
+  .Catalog-content {
+    background-color: #6ec8fa;
+    padding: 2.5rem 1.25rem;
+    margin-top: 2.5rem; }
+    .Catalog-content .button {
+      margin: 2.5rem auto 0; }
+  .Catalog-cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+    gap: 1.25rem; }
+  .Catalog-card {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+    background-color: #fff; }
+    .Catalog-card--image {
+      width: 100%;
+      max-height: 15.625rem;
+      object-fit: cover; }
+    .Catalog-card--textContainer {
+      padding: 0 1.25rem 1.875rem; }
+      .Catalog-card--textContainer h2 {
+        color: #6ec8fa;
+        font-weight: 500;
+        font-size: 1.625rem;
+        margin-bottom: 1rem; }
+
+.Contact {
+  margin-top: 5rem; }
+  .Contact-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1.875rem;
+    margin-top: 2.5rem; }
+    @media (max-width: 800px) {
+      .Contact-content {
+        flex-flow: column nowrap; } }
+  .Contact iframe {
+    margin-left: 1.25rem;
+    flex: 1;
+    min-height: 18.75rem; }
+    @media (max-width: 800px) {
+      .Contact iframe {
+        margin-left: 0; } }
+  .Contact-container {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem; }
+  .Contact-tableContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 0.75rem 1.25rem; }
+    .Contact-tableContainer img {
+      width: 2.5rem;
+      height: auto;
+      margin-top: 0.3125rem; }
+      @media (max-width: 576px) {
+        .Contact-tableContainer img {
+          display: none; } }
+    .Contact-tableContainer.card-container {
+      background-color: #f4f4f4; }
+      .Contact-tableContainer.card-container .Contact-table .Contact-table--row {
+        gap: 3.4375rem; }
+  .Contact-table {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem; }
+    .Contact-table--row {
+      display: flex;
+      flex-flow: row nowrap;
+      max-width: 31.25rem;
+      justify-content: space-between;
+      gap: 1.875rem; }
+    .Contact-table--text {
+      width: 15.625rem; }
+
+.Footer {
+  background-color: #505050; }
+  .Footer-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .Footer-container img {
+      height: 1.875rem;
+      width: auto; }
+    @media (max-width: 576px) {
+      .Footer-container {
+        flex-flow: column nowrap; } }
+  .Footer-text {
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 300; }
+    .Footer-text a {
+      font-weight: 600;
+      text-decoration: underline; }
+      .Footer-text a:hover, .Footer-text a:focus {
+        text-decoration: none; }

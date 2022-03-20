@@ -7,6 +7,7 @@ html * {
 body {
 	background-color: $colorBase;
 	color: $colorText;
+	overflow-x: hidden;
 }
 ul {
 	list-style: none;
@@ -37,4 +38,9 @@ a {
 }
 .u-m-20 {
 	margin: 0 rem(20px);
+}
+.u-sm-text {
+	font-size: rem(14px);
+	font-weight: $fontLight;
+	line-height: 1.5;
 }
