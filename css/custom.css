@@ -270,6 +270,14 @@ button {
     margin-top: 2.5rem; }
     .Catalog-content .button {
       margin: 2.5rem auto 0; }
+    .Catalog-content.mainCatalog-content {
+      padding: 1.25rem;
+      margin-top: 0; }
+      .Catalog-content.mainCatalog-content .mainCatalog-topTitle {
+        font-size: 1.625rem;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 1rem; }
   .Catalog-cardsContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
@@ -279,6 +287,15 @@ button {
     flex-flow: column nowrap;
     gap: 1.25rem;
     background-color: #fff; }
+    .Catalog-card.catalogPage-card {
+      padding: 1.25rem; }
+      .Catalog-card.catalogPage-card .Catalog-card--textContainer {
+        padding: 0; }
+        .Catalog-card.catalogPage-card .Catalog-card--textContainer p {
+          -webkit-line-clamp: 3; }
+        .Catalog-card.catalogPage-card .Catalog-card--textContainer h2 {
+          font-size: 1.25rem;
+          margin-bottom: 0.625rem; }
     .Catalog-card--image {
       width: 100%;
       max-height: 15.625rem;
@@ -290,6 +307,12 @@ button {
         font-weight: 500;
         font-size: 1.625rem;
         margin-bottom: 1rem; }
+      .Catalog-card--textContainer p {
+        overflow: hidden;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical; }
 
 .Contact {
   margin-top: 5rem; }
@@ -369,3 +392,115 @@ button {
       text-decoration: underline; }
       .Footer-text a:hover, .Footer-text a:focus {
         text-decoration: none; }
+
+.mainCatalog {
+  margin: 5.1875rem 0 1.25rem;
+  background-color: #fff;
+  padding-bottom: 1.875rem; }
+  @media (max-width: 800px) {
+    .mainCatalog {
+      margin-top: 5.75rem; } }
+  .mainCatalog-filtersContainer {
+    padding: 0 1.25rem;
+    margin-top: 2.5rem; }
+  .mainCatalog-filters {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.25rem;
+    margin-top: 1.875rem; }
+    @media (max-width: 800px) {
+      .mainCatalog-filters {
+        flex-flow: column nowrap; } }
+  .mainCatalog-sideNav {
+    flex: 1;
+    background-color: #58e8b7;
+    height: fit-content; }
+    .mainCatalog-sideNav--tile {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 1.25rem;
+      justify-content: space-between;
+      padding: 0.75rem 2rem;
+      transition: all 200ms ease-in-out; }
+      @media (max-width: 800px) {
+        .mainCatalog-sideNav--tile {
+          display: none; } }
+      .mainCatalog-sideNav--tile img {
+        height: 1.125rem;
+        width: auto; }
+      .mainCatalog-sideNav--tile h3 {
+        font-size: 1.25rem;
+        color: #fff;
+        font-weight: 500;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .mainCatalog-sideNav--tile:hover, .mainCatalog-sideNav--tile:focus {
+        background-color: #49d4a6; }
+        .mainCatalog-sideNav--tile:hover img, .mainCatalog-sideNav--tile:focus img {
+          transform: translateX(6px);
+          transition: all 200ms ease-in-out; }
+      .mainCatalog-sideNav--tile.is-active:not(.mobile-nav) {
+        background-color: #49d4a6; }
+      .mainCatalog-sideNav--tile.show {
+        display: flex; }
+    .mainCatalog-sideNav--mobileTile {
+      display: none;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 1.25rem;
+      justify-content: space-between;
+      padding: 0.75rem 2rem; }
+      .mainCatalog-sideNav--mobileTile .chevron-up {
+        display: none; }
+      .mainCatalog-sideNav--mobileTile .chevron-down {
+        display: block; }
+      .mainCatalog-sideNav--mobileTile img {
+        height: 0.75rem; }
+      .mainCatalog-sideNav--mobileTile h3 {
+        font-size: 1.25rem;
+        color: #fff;
+        font-weight: 500;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      @media (max-width: 800px) {
+        .mainCatalog-sideNav--mobileTile {
+          display: flex; } }
+      .mainCatalog-sideNav--mobileTile.is-active .chevron-up {
+        display: block; }
+      .mainCatalog-sideNav--mobileTile.is-active .chevron-down {
+        display: none; }
+  .mainCatalog-productsContainer {
+    flex: 3; }
+  .mainCatalog-products {
+    grid-template-columns: repeat(auto-fill, minmax(11.25rem, 1fr));
+    gap: 1.25rem;
+    display: none; }
+    .mainCatalog-products.is-active {
+      display: grid; }
+  .mainCatalog-card {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+    background-color: #f4f4f4; }
+    .mainCatalog-card--image {
+      width: 100%;
+      max-height: 15.625rem;
+      object-fit: cover; }
+    .mainCatalog-card--textContainer {
+      padding: 0 1.25rem 1.875rem; }
+      .mainCatalog-card--textContainer h2 {
+        color: #6ec8fa;
+        font-weight: 500;
+        font-size: 1.25rem;
+        margin-bottom: 0.625rem; }
+      .mainCatalog-card--textContainer p {
+        overflow: hidden;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical; }
