@@ -395,14 +395,12 @@ button {
 
 .mainCatalog {
   margin: 5.1875rem 0 1.25rem;
-  background-color: #fff;
-  padding-bottom: 1.875rem; }
+  background-color: #fff; }
   @media (max-width: 800px) {
     .mainCatalog {
       margin-top: 5.75rem; } }
   .mainCatalog-filtersContainer {
-    padding: 0 1.25rem;
-    margin-top: 2.5rem; }
+    padding: 1.25rem 1.25rem 2.5rem; }
   .mainCatalog-filters {
     display: flex;
     flex-flow: row nowrap;

@@ -1,15 +1,13 @@
 .mainCatalog {
 	margin: rem(83px) 0 rem(20px);
 	background-color: $colorWhite;
-	padding-bottom: rem(30px);
 
 	@include respondTo(sm) {
 		margin-top: rem(92px);
 	}
 
 	&-filtersContainer {
-		padding: 0 rem(20px);
-		margin-top: rem(40px);
+		padding: rem(20px) rem(20px) rem(40px);
 	}
 	&-filters {
 		display: flex;
