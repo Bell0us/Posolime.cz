@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+html * {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif; }
+
+body {
+  background-color: #f4f4f4;
+  color: #292929;
+  overflow-x: hidden; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.Main {
+  margin: 5.1875rem 0 1.25rem;
+  background-color: #fff;
+  padding-bottom: 1.875rem; }
+  @media (max-width: 800px) {
+    .Main {
+      margin-top: 5.75rem; } }
+
+.Container {
+  position: relative;
+  width: 100%;
+  max-width: 72.25rem;
+  padding: 0 1rem;
+  margin: 0 auto; }
+  @media (max-width: 576px) {
+    .Container {
+      padding: 0 1.25rem; } }
+
+.u-m-20 {
+  margin: 0 1.25rem; }
+
+.u-sm-text {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5; }
+
+.button {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: min-content;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem; }
+  .button img {
+    height: 1rem;
+    width: auto;
+    transition: transform 200ms ease-in-out; }
+  .button p {
+    white-space: nowrap;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600; }
+  .button-primary {
+    background-color: #6ec8fa; }
+  .button-secondary {
+    background-color: #58e8b7; }
+  .button-outline {
+    border: 2px solid #fff;
+    transition: background-color 200ms ease-in-out; }
+    .button-outline:hover, .button-outline:focus {
+      background-color: #58e8b7; }
+  .button:hover img, .button:focus img {
+    transform: translateX(6px); }
+
+/* Nav button */
+button {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  z-index: 10; }
+  @media (max-width: 800px) {
+    button {
+      display: unset; } }
+  button span {
+    position: absolute;
+    left: 50%;
+    width: 26px;
+    height: 2px;
+    background-color: #fff; }
+    button span:nth-child(1) {
+      top: 0;
+      transform: translateX(-50%) translateY(0);
+      transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s, transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87); }
+    button span:nth-child(2) {
+      top: 8px;
+      opacity: 1;
+      transform: translateX(-50%); }
+    button span:last-child {
+      top: 16px;
+      transform: translateX(-50%) translateY(0);
+      transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s, transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87); }
+  button.open span:nth-child(1) {
+    top: 50%;
+    transform: translateX(-50%) translateY(0) rotate(45deg);
+    transition: top 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s; }
+  button.open span:nth-child(2) {
+    opacity: 0; }
+  button.open span:last-child {
+    top: 50%;
+    transform: translateX(-50%) translateY(0) rotate(-45deg);
+    transition: bottom 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87), transform 0.3s cubic-bezier(0.21, 0.83, 0.26, 0.87) 0.3s; }
+
+.Title-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center; }
+
+.Title-line {
+  background-color: #6ec8fa;
+  height: 0.1875rem;
+  border-radius: 100vw;
+  flex: 1; }
+
+.Title-text {
+  color: #6ec8fa;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 1rem; }
+
+.MenuOverlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 72px;
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  transition: all 200ms ease-in-out; }
+  .MenuOverlay-bg {
+    max-width: 400px;
+    height: 100%;
+    background-color: #6ec8fa;
+    margin-left: auto;
+    transform: translateX(100%);
+    transition: all 200ms ease-in-out; }
+  .MenuOverlay-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    padding-top: 2.5rem; }
+    .MenuOverlay-nav--item {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #fff;
+      padding: 1rem 0;
+      display: inline-block;
+      transition: background-color 200ms ease-in-out; }
+      .MenuOverlay-nav--item:hover, .MenuOverlay-nav--item:focus {
+        text-decoration: underline; }
+  .MenuOverlay.open {
+    background-color: rgba(0, 0, 0, 0.65);
+    pointer-events: all; }
+    .MenuOverlay.open .MenuOverlay-bg {
+      transform: translateX(0); }
+
+.Header {
+  background-color: #6ec8fa;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  box-shadow: 0 3px 8px -3px rgba(0, 0, 0, 0.25); }
+  .Header-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 800px) {
+      .Header-content {
+        padding-top: 1rem;
+        padding-bottom: 1rem; } }
+    .Header-content img {
+      height: 2.5rem;
+      width: auto; }
+  .Header-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-self: stretch; }
+    @media (max-width: 800px) {
+      .Header-nav {
+        display: none; } }
+    .Header-nav li.is-active .Header-nav--item {
+      background-color: #64b8e7; }
+    .Header-nav--item {
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: #fff;
+      padding: 1.125rem 1.875rem;
+      display: inline-block;
+      transition: background-color 200ms ease-in-out; }
+      .Header-nav--item:hover, .Header-nav--item:focus {
+        background-color: #64b8e7; }
+
+.Home-content {
+  background-color: #6ec8fa;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem 1.25rem; }
+  .Home-content--text {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px; }
+    .Home-content--text p {
+      color: #fff;
+      font-size: 1.125rem;
+      text-align: center;
+      font-weight: 500; }
+
+.Home-buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem; }
+
+.About {
+  margin-top: 5rem;
+  padding: 0px 1.25rem; }
+  .About-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1.25rem;
+    margin-top: 2.5rem; }
+    .About-content--image {
+      width: 45%;
+      height: auto;
+      object-fit: cover; }
+      @media (max-width: 800px) {
+        .About-content--image {
+          display: none; } }
+    .About-content--right {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      gap: 1.25rem; }
+    .About-content--text {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 1.25rem; }
+    @media (max-width: 800px) {
+      .About-content .button {
+        margin: 1rem auto 0; } }
+
+.Catalog {
+  margin-top: 5rem; }
+  .Catalog-content {
+    background-color: #6ec8fa;
+    padding: 2.5rem 1.25rem;
+    margin-top: 2.5rem; }
+    .Catalog-content .button {
+      margin: 2.5rem auto 0; }
+    .Catalog-content.mainCatalog-content {
+      padding: 1.25rem;
+      margin-top: 0; }
+      .Catalog-content.mainCatalog-content .mainCatalog-topTitle {
+        font-size: 1.625rem;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 1rem; }
+  .Catalog-cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+    gap: 1.25rem; }
+  .Catalog-card {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+    background-color: #fff; }
+    .Catalog-card.catalogPage-card {
+      padding: 1.25rem; }
+      .Catalog-card.catalogPage-card .Catalog-card--textContainer {
+        padding: 0; }
+        .Catalog-card.catalogPage-card .Catalog-card--textContainer p {
+          -webkit-line-clamp: 3; }
+        .Catalog-card.catalogPage-card .Catalog-card--textContainer h2 {
+          font-size: 1.25rem;
+          margin-bottom: 0.625rem; }
+    .Catalog-card--image {
+      width: 100%;
+      max-height: 15.625rem;
+      object-fit: cover; }
+    .Catalog-card--textContainer {
+      padding: 0 1.25rem 1.875rem; }
+      .Catalog-card--textContainer h2 {
+        color: #6ec8fa;
+        font-weight: 500;
+        font-size: 1.625rem;
+        margin-bottom: 1rem; }
+      .Catalog-card--textContainer p {
+        overflow: hidden;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical; }
+
+.Contact {
+  margin-top: 5rem; }
+  .Contact-content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1.875rem;
+    margin-top: 2.5rem; }
+    @media (max-width: 800px) {
+      .Contact-content {
+        flex-flow: column nowrap; } }
+  .Contact iframe {
+    margin-left: 1.25rem;
+    flex: 1;
+    min-height: 18.75rem; }
+    @media (max-width: 800px) {
+      .Contact iframe {
+        margin-left: 0; } }
+  .Contact-container {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem; }
+  .Contact-tableContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 0.75rem 1.25rem; }
+    .Contact-tableContainer img {
+      width: 2.5rem;
+      height: auto;
+      margin-top: 0.3125rem; }
+      @media (max-width: 576px) {
+        .Contact-tableContainer img {
+          display: none; } }
+    .Contact-tableContainer.card-container {
+      background-color: #f4f4f4; }
+      .Contact-tableContainer.card-container .Contact-table .Contact-table--row {
+        gap: 3.4375rem; }
+  .Contact-table {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem; }
+    .Contact-table--row {
+      display: flex;
+      flex-flow: row nowrap;
+      max-width: 31.25rem;
+      justify-content: space-between;
+      gap: 1.875rem; }
+    .Contact-table--text {
+      width: 15.625rem; }
+
+.Footer {
+  background-color: #505050; }
+  .Footer-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .Footer-container img {
+      height: 1.875rem;
+      width: auto; }
+    @media (max-width: 576px) {
+      .Footer-container {
+        flex-flow: column nowrap; } }
+  .Footer-text {
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 300; }
+    .Footer-text a {
+      font-weight: 600;
+      text-decoration: underline; }
+      .Footer-text a:hover, .Footer-text a:focus {
+        text-decoration: none; }
+
+.mainCatalog {
+  margin: 5.1875rem 0 1.25rem;
+  background-color: #fff; }
+  @media (max-width: 800px) {
+    .mainCatalog {
+      margin-top: 5.75rem; } }
+  .mainCatalog-filtersContainer {
+    padding: 1.25rem 1.25rem 2.5rem; }
+  .mainCatalog-filters {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1.25rem;
+    margin-top: 1.875rem; }
+    @media (max-width: 800px) {
+      .mainCatalog-filters {
+        flex-flow: column nowrap; } }
+  .mainCatalog-sideNav {
+    flex: 1;
+    background-color: #58e8b7;
+    height: fit-content; }
+    .mainCatalog-sideNav--tile {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 1.25rem;
+      justify-content: space-between;
+      padding: 0.75rem 2rem;
+      transition: all 200ms ease-in-out; }
+      @media (max-width: 800px) {
+        .mainCatalog-sideNav--tile {
+          display: none; } }
+      .mainCatalog-sideNav--tile img {
+        height: 1.125rem;
+        width: auto; }
+      .mainCatalog-sideNav--tile h3 {
+        font-size: 1.25rem;
+        color: #fff;
+        font-weight: 500;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .mainCatalog-sideNav--tile:hover, .mainCatalog-sideNav--tile:focus {
+        background-color: #49d4a6; }
+        .mainCatalog-sideNav--tile:hover img, .mainCatalog-sideNav--tile:focus img {
+          transform: translateX(6px);
+          transition: all 200ms ease-in-out; }
+      .mainCatalog-sideNav--tile.is-active:not(.mobile-nav) {
+        background-color: #49d4a6; }
+      .mainCatalog-sideNav--tile.show {
+        display: flex; }
+    .mainCatalog-sideNav--mobileTile {
+      display: none;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: 1.25rem;
+      justify-content: space-between;
+      padding: 0.75rem 2rem; }
+      .mainCatalog-sideNav--mobileTile .chevron-up {
+        display: none; }
+      .mainCatalog-sideNav--mobileTile .chevron-down {
+        display: block; }
+      .mainCatalog-sideNav--mobileTile img {
+        height: 0.75rem; }
+      .mainCatalog-sideNav--mobileTile h3 {
+        font-size: 1.25rem;
+        color: #fff;
+        font-weight: 500;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      @media (max-width: 800px) {
+        .mainCatalog-sideNav--mobileTile {
+          display: flex; } }
+      .mainCatalog-sideNav--mobileTile.is-active .chevron-up {
+        display: block; }
+      .mainCatalog-sideNav--mobileTile.is-active .chevron-down {
+        display: none; }
+  .mainCatalog-productsContainer {
+    flex: 3; }
+  .mainCatalog-products {
+    grid-template-columns: repeat(auto-fill, minmax(11.25rem, 1fr));
+    gap: 1.25rem;
+    display: none; }
+    .mainCatalog-products.is-active {
+      display: grid; }
+  .mainCatalog-card {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.25rem;
+    background-color: #f4f4f4; }
+    .mainCatalog-card--image {
+      width: 100%;
+      max-height: 15.625rem;
+      object-fit: cover; }
+    .mainCatalog-card--textContainer {
+      padding: 0 1.25rem 1.875rem;
+      line-height: 1;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      height: 100%; }
+      .mainCatalog-card--textContainer h2 {
+        color: #6ec8fa;
+        font-weight: 500;
+        font-size: 1.25rem;
+        margin-bottom: 0.625rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; }
+      .mainCatalog-card--textContainer p {
+        overflow: hidden;
+        width: 100%;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical; }

@@ -1,0 +1,75 @@
+.Catalog {
+	margin-top: rem(80px);
+
+	&-content {
+		background-color: $colorMain;
+		padding: rem(40px) rem(20px);
+		margin-top: rem(40px);
+
+		.button {
+			margin: rem(40px) auto 0;
+		}
+
+		&.mainCatalog-content {
+			padding: rem(20px);
+			margin-top: 0;
+
+			.mainCatalog-topTitle {
+				font-size: rem(26px);
+				color: $colorWhite;
+				font-weight: $fontSemibold;
+				margin-bottom: rem(16px);
+			}
+		}
+	}
+	&-cardsContainer {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(rem(300px), 1fr));
+		gap: rem(20px);
+	}
+	&-card {
+		display: flex;
+		flex-flow: column nowrap;
+		gap: rem(20px);
+		background-color: $colorWhite;
+
+		&.catalogPage-card {
+			padding: rem(20px);
+			.Catalog-card--textContainer {
+				padding: 0;
+
+				p {
+					-webkit-line-clamp: 3;
+				}
+				h2 {
+					font-size: rem(20px);
+					margin-bottom: rem(10px);
+				}
+			}
+		}
+
+		&--image {
+			width: 100%;
+			max-height: rem(250px);
+			object-fit: cover;
+		}
+		&--textContainer {
+			padding: 0 rem(20px) rem(30px);
+
+			h2 {
+				color: $colorMain;
+				font-weight: $fontSemibold;
+				font-size: rem(26px);
+				margin-bottom: rem(16px);
+			}
+
+			p {
+				overflow: hidden;
+				width: 100%;
+				display: -webkit-box;
+				-webkit-line-clamp: 5;
+				-webkit-box-orient: vertical;
+			}
+		}
+	}
+}

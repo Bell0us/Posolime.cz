@@ -1,0 +1,40 @@
+.About {
+	margin-top: rem(80px);
+	padding: 0px rem(20px);
+
+	&-content {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		gap: rem(20px);
+		margin-top: rem(40px);
+
+		&--image {
+			width: 45%;
+			height: auto;
+			object-fit: cover;
+
+			@include respondTo(sm) {
+				display: none;
+			}
+		}
+
+		&--right {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+			gap: rem(20px);
+		}
+		&--text {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: rem(20px);
+		}
+
+		.button {
+			@include respondTo(sm) {
+				margin: rem(16px) auto 0;
+			}
+		}
+	}
+}

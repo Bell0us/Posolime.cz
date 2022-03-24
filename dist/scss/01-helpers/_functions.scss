@@ -1,0 +1,17 @@
+@function rem($size) {
+	$size: if(unitless($size), $size * 1px, $size);
+	$remSize: ($size / 16px) * 1rem;
+
+	@return $remSize;
+}
+
+@mixin respondTo($breakpoint) {
+	@if map-has-key($breakpoints-max, $breakpoint) {
+		@media (max-width: #{map-get($breakpoints-max, $breakpoint)}) {
+			@content;
+		}
+	} @else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Please make sure it is defined in `$breakpoints` map.";
+	}
+}

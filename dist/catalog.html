@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Posolime.cz | Katalog</title>
+		<link rel="stylesheet" href="./css/custom.css" />
+		<script src="./js/main.js" defer></script>
+	</head>
+	<body>
+		<header class="Header">
+			<div class="Container Header-content">
+				<a href="./index.html">
+					<img src="./img/logo-white.png" alt="Posolime logo" />
+				</a>
+				<ul class="Header-nav">
+					<li>
+						<a class="Header-nav--item" href="./index.html">Úvod</a>
+					</li>
+					<li>
+						<a class="Header-nav--item" href="./index.html#About">O nás</a>
+					</li>
+					<li class="is-active">
+						<a class="Header-nav--item" href="./index.html#Catalog">Katalog</a>
+					</li>
+					<li>
+						<a class="Header-nav--item" href="./index.html#Contact">Kontakty</a>
+					</li>
+				</ul>
+				<button id="mobile-menu-button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</header>
+		<div class="Container">
+			<main class="mainCatalog" role="main" aria-label="Hlavní obsah">
+				<section class="mainCatalog-filtersContainer">
+					<div class="Title-container">
+						<div class="Title-line"></div>
+						<h1 class="Title-text">Katalog</h1>
+						<div class="Title-line"></div>
+					</div>
+					<div class="mainCatalog-filters">
+						<div class="mainCatalog-sideNav">
+							<div class="mainCatalog-sideNav--mobileTile" id="catalog-nav-tile">
+								<h3 id="catalog-mobile-title"></h3>
+								<a href="#" id="catalog-mobile-nav">
+									<img class="chevron-down" src="./img/icons/chevron-down.svg" alt="" />
+									<img class="chevron-up" src="./img/icons/chevron-up.svg" alt="" />
+								</a>
+							</div>
+							<a href="#" class="mainCatalog-sideNav--tile is-active" id="potravinova-sul">
+								<h3>Potravinová sůl</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="prumyslova-sul">
+								<h3>Průmyslová sůl</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="bazenova-sul">
+								<h3>Bazénová sůl</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="tabletova-sul">
+								<h3>Tabletová sůl</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="krmna-sul">
+								<h3>Krmná sůl</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="sl-solsel">
+								<h3>Solné lizy Solsel</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="ml-solsel">
+								<h3>Minerální lizy Solsel</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="posypova-sul">
+								<h3>Zimní posypová sůl</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="ryby-sul">
+								<h3>Sůl na údržbu vody pro ryby</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="morska-sul">
+								<h3>Mořská sůl</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="ml-osvior">
+								<h3>Minerální lizy Osvior</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="brikety">
+								<h3>Dřevěné brikety</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="substraty">
+								<h3>Zahradnické substráty</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+							<a href="#" class="mainCatalog-sideNav--tile" id="folie">
+								<h3>Fixační folie</h3>
+								<img src="./img/icons/chevron-right.svg" alt="" />
+							</a>
+						</div>
+						<div class="mainCatalog-productsContainer">
+							<div class="mainCatalog-products potravinova-sul">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Potravinová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Potravinová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Potravinová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Potravinová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products prumyslova-sul">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Průmyslová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Průmyslová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Průmyslová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products bazenova-sul">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Bazénová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Bazénová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products tabletova-sul">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Tabletová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Tabletová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Tabletová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Tabletová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products krmna-sul">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Krmná sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Krmná sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Krmná sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Krmná sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Krmná sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products sl-solsel">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Solné lizy Solsel</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Solné lizy Solsel</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products ml-solsel">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Minerální lizy Solsel</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Minerální lizy Solsel</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Minerální lizy Solsel</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products posypova-sul">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Posypová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Posypová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Posypová sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products ryby-sul">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Sůl na údržbu vody pro ryby</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Sůl na údržbu vody pro ryby</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Sůl na údržbu vody pro ryby</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products morska-sul">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Mořská sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Mořská sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Mořská sůl</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products ml-osvior">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Minerální lizy Osvior</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Minerální lizy Osvior</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Minerální lizy Osvior</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products brikety">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Dřevěné brikety</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Dřevěné brikety</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Dřevěné brikety</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products substraty">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Zahradnické substráty</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Zahradnické substráty</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Zahradnické substráty</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="mainCatalog-products folie">
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Fixační fólie</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Fixační fólie</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+								<div class="mainCatalog-card">
+									<img class="mainCatalog-card--image" src="https://picsum.photos/900/600" alt="" />
+
+									<div class="mainCatalog-card--textContainer">
+										<h2>Fixační fólie</h2>
+										<p class="u-sm-text">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+											pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis.
+											Erat.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="Catalog-content mainCatalog-content">
+					<h1 class="mainCatalog-topTitle">Nejčastěji prodávané produkty</h1>
+					<div class="Catalog-cardsContainer">
+						<div class="Catalog-card catalogPage-card">
+							<div class="Catalog-card--textContainer">
+								<h2>Název produktu</h2>
+								<p class="u-sm-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+									pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis. Erat.
+								</p>
+							</div>
+						</div>
+						<div class="Catalog-card catalogPage-card">
+							<div class="Catalog-card--textContainer">
+								<h2>Název produktu</h2>
+								<p class="u-sm-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+									pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis. Erat.
+								</p>
+							</div>
+						</div>
+						<div class="Catalog-card catalogPage-card">
+							<div class="Catalog-card--textContainer">
+								<h2>Název produktu</h2>
+								<p class="u-sm-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac sit velit est eget sem in. Ut porttitor odio
+									pellentesque ultricies ut non aliquam. Netus sed hac netus proin. Ipsum at fringilla ac cursus venenatis. Erat.
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer class="Footer">
+			<div class="Container Footer-container">
+				<img src="./img/logo-white.png" alt="Posolime logo" />
+				<p class="Footer-text">Web created by <a href="#">Jáchym Tinavský</a></p>
+			</div>
+		</footer>
+		<div class="MenuOverlay">
+			<div class="MenuOverlay-bg">
+				<div class="Container">
+					<ul class="MenuOverlay-nav">
+						<li>
+							<a class="MenuOverlay-nav--item" href="./index.html">Úvod</a>
+						</li>
+						<li>
+							<a class="MenuOverlay-nav--item" href="./index.html#About">O nás</a>
+						</li>
+						<li>
+							<a class="MenuOverlay-nav--item" href="./index.html#Catalog">Katalog</a>
+						</li>
+						<li>
+							<a class="MenuOverlay-nav--item" href="./index.html#Contact">Kontakty</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

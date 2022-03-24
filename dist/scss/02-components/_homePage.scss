@@ -1,0 +1,32 @@
+.Home {
+	&-content {
+		background-color: $colorMain;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		gap: rem(40px);
+		padding: rem(40px) rem(20px);
+
+		&--text {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			gap: rem(16px);
+			max-width: 500px;
+
+			p {
+				color: $colorWhite;
+				font-size: rem(18px);
+				text-align: center;
+				font-weight: $fontSemibold;
+			}
+		}
+	}
+	&-buttons {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		gap: rem(20px);
+		margin-top: rem(20px);
+	}
+}
