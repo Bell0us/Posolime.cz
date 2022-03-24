@@ -32,6 +32,12 @@
 			display: none;
 		}
 
+		li.is-active {
+			.Header-nav--item {
+				background-color: $colorMainDark;
+			}
+		}
+
 		&--item {
 			font-size: rem(18px);
 			font-weight: $fontNormal;
@@ -39,10 +45,6 @@
 			padding: rem(18px) rem(30px);
 			display: inline-block;
 			transition: background-color 200ms ease-in-out;
-
-			&.is-active {
-				background-color: $colorMainDark;
-			}
 
 			&:hover,
 			&:focus {

@@ -10,13 +10,16 @@ mobileMenuButton.addEventListener("click", () => {
 	mobileMenuButton.classList.toggle("open");
 	menuOverlay.classList.toggle("open");
 });
-catalogButton.addEventListener("click", (e) => {
-	e.preventDefault();
-	catalogMobileTile.classList.toggle("is-active");
-	catalogNavTiles.forEach((tile) => {
-		tile.classList.toggle("show");
+
+if (catalogButton) {
+	catalogButton.addEventListener("click", (e) => {
+		e.preventDefault();
+		catalogMobileTile.classList.toggle("is-active");
+		catalogNavTiles.forEach((tile) => {
+			tile.classList.toggle("show");
+		});
 	});
-});
+}
 let activeTile = "";
 catalogNavTiles.forEach((tile) => {
 	/* Je daný block aktivní? */

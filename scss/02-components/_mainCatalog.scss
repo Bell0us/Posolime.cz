@@ -130,12 +130,23 @@
 		}
 		&--textContainer {
 			padding: 0 rem(20px) rem(30px);
+			line-height: 1;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+			height: 100%;
 
 			h2 {
 				color: $colorMain;
 				font-weight: $fontSemibold;
 				font-size: rem(20px);
 				margin-bottom: rem(10px);
+				overflow: hidden;
+				text-overflow: ellipsis;
+				width: 100%;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
 			}
 
 			p {
