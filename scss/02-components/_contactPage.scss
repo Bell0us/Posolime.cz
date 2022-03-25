@@ -42,26 +42,28 @@
 		}
 		&.card-container {
 			background-color: $colorBase;
-			.Contact-table {
-				.Contact-table--row {
-					gap: rem(55px);
-				}
-			}
 		}
 	}
 	&-table {
 		display: flex;
 		flex-flow: column nowrap;
+		width: 100%;
 		gap: rem(8px);
 		&--row {
 			display: flex;
 			flex-flow: row nowrap;
-			max-width: rem(500px);
-			justify-content: space-between;
+			width: 100%;
 			gap: rem(30px);
+			@include respondTo(md) {
+				font-size: rem(14px);
+			}
 		}
 		&--text {
-			width: rem(250px);
+			flex: 1;
+		}
+		&--heading {
+			flex: 1;
+			font-weight: $fontSemibold;
 		}
 	}
 }

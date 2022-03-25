@@ -24,7 +24,7 @@
 	}
 	&-cardsContainer {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(rem(300px), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(rem(250px), 1fr));
 		gap: rem(20px);
 	}
 	&-card {
@@ -44,6 +44,9 @@
 				h2 {
 					font-size: rem(20px);
 					margin-bottom: rem(10px);
+					@include respondTo(xs) {
+						font-size: rem(18px);
+					}
 				}
 			}
 		}
@@ -61,6 +64,9 @@
 				font-weight: $fontSemibold;
 				font-size: rem(26px);
 				margin-bottom: rem(16px);
+				@include respondTo(xs) {
+					font-size: rem(18px);
+				}
 			}
 
 			p {

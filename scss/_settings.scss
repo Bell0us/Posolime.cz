@@ -43,4 +43,7 @@ a {
 	font-size: rem(14px);
 	font-weight: $fontLight;
 	line-height: 1.5;
+	@include respondTo(xs) {
+		font-size: rem(12px);
+	}
 }

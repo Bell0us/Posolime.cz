@@ -20,7 +20,6 @@
 	&-nav {
 		display: flex;
 		flex-flow: column nowrap;
-		align-items: flex-end;
 		padding-top: rem(40px);
 
 		&--item {
@@ -28,12 +27,26 @@
 			font-weight: $fontNormal;
 			color: $colorWhite;
 			padding: rem(16px) 0;
-			display: inline-block;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
 			transition: background-color 200ms ease-in-out;
+			border-bottom: 1px solid $colorWhite;
+
+			img {
+				height: rem(20px);
+				transform: rotate(180deg) translateX(-10px);
+				transition: all 200ms ease-in;
+			}
 
 			&:hover,
 			&:focus {
 				text-decoration: underline;
+
+				img {
+					transform: rotate(180deg) translateX(0px);
+				}
 			}
 		}
 	}

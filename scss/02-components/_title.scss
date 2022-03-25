@@ -15,5 +15,9 @@
 		font-size: rem(32px);
 		font-weight: $fontBold;
 		margin: 0 rem(16px);
+		@include respondTo(xs) {
+			font-size: rem(22px);
+			margin: 0 rem(10px);
+		}
 	}
 }

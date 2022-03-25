@@ -7,6 +7,11 @@
 		gap: rem(40px);
 		padding: rem(40px) rem(20px);
 
+		img {
+			max-width: 80%;
+			height: auto;
+		}
+
 		&--text {
 			display: flex;
 			flex-flow: column nowrap;
@@ -19,6 +24,9 @@
 				font-size: rem(18px);
 				text-align: center;
 				font-weight: $fontSemibold;
+				@include respondTo(xs) {
+					font-size: rem(16px);
+				}
 			}
 		}
 	}
@@ -28,5 +36,10 @@
 		justify-content: center;
 		gap: rem(20px);
 		margin-top: rem(20px);
+
+		@include respondTo(xs) {
+			flex-flow: column nowrap;
+			align-items: center;
+		}
 	}
 }

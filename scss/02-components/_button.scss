@@ -9,13 +9,20 @@
 		height: rem(16px);
 		width: auto;
 		transition: transform 200ms ease-in-out;
+		@include respondTo(xs) {
+			height: rem(14px);
+		}
 	}
 	p {
 		white-space: nowrap;
 		color: $colorWhite;
 		font-size: rem(16px);
 		font-weight: $fontBold;
+		@include respondTo(xs) {
+			font-size: rem(14px);
+		}
 	}
+
 	&-primary {
 		background-color: $colorMain;
 	}

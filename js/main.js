@@ -5,10 +5,18 @@ const catalogMobileTile = document.getElementById("catalog-nav-tile");
 const catalogMobileTitle = document.getElementById("catalog-mobile-title");
 const catalogNavTiles = document.querySelectorAll(".mainCatalog-sideNav--tile");
 const catalogProducts = document.querySelectorAll(".mainCatalog-products");
+const overlayLinks = document.querySelectorAll(".MenuOverlay-nav--item");
 
 mobileMenuButton.addEventListener("click", () => {
 	mobileMenuButton.classList.toggle("open");
 	menuOverlay.classList.toggle("open");
+});
+
+overlayLinks.forEach((link) => {
+	link.addEventListener("click", (e) => {
+		mobileMenuButton.classList.toggle("open");
+		menuOverlay.classList.toggle("open");
+	});
 });
 
 if (catalogButton) {
