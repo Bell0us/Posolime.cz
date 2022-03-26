@@ -1,6 +1,5 @@
 const mobileMenuButton = document.getElementById("mobile-menu-button");
 const menuOverlay = document.querySelector(".MenuOverlay");
-const catalogButton = document.getElementById("catalog-mobile-nav");
 const catalogMobileTile = document.getElementById("catalog-nav-tile");
 const catalogMobileTitle = document.getElementById("catalog-mobile-title");
 const catalogNavTiles = document.querySelectorAll(".mainCatalog-sideNav--tile");
@@ -19,8 +18,8 @@ overlayLinks.forEach((link) => {
 	});
 });
 
-if (catalogButton) {
-	catalogButton.addEventListener("click", (e) => {
+if (catalogMobileTile) {
+	catalogMobileTile.addEventListener("click", (e) => {
 		e.preventDefault();
 		catalogMobileTile.classList.toggle("is-active");
 		catalogNavTiles.forEach((tile) => {
