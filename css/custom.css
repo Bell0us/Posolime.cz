@@ -306,10 +306,14 @@ button {
       padding: 1.25rem;
       margin-top: 0; }
       .Catalog-content.mainCatalog-content .mainCatalog-topTitle {
-        font-size: 1.625rem;
+        font-size: 1.5rem;
         color: #fff;
         font-weight: 500;
         margin-bottom: 1rem; }
+        @media (max-width: 576px) {
+          .Catalog-content.mainCatalog-content .mainCatalog-topTitle {
+            font-size: 1.25rem;
+            text-align: center; } }
   .Catalog-cardsContainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
